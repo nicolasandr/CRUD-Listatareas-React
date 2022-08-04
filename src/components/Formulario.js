@@ -28,7 +28,12 @@ const handleSubmit  = (e) => {
  setArregloTareas([...arregloTareas,tarea]);
  setTarea('');
 }
-
+//funcion para borrar tarea
+const borrarTarea = (nombre) =>{
+ let arregloModificado = arregloTareas.filter((valor)=>{return valor != nombre})
+ // actualizar el state
+ setArregloTareas(arregloModificado);
+}
   return (
     <div>
       <Form onSubmit={handleSubmit}>
@@ -46,7 +51,7 @@ const handleSubmit  = (e) => {
         </Form.Group>
       </Form>
       {/* aqui invoco al componente ListaTareas */}
-      <ListaTareas arregloTareas={arregloTareas}></ListaTareas>
+      <ListaTareas arregloTareas={arregloTareas} borrarTarea={borrarTarea}></ListaTareas>
     </div>
    
   );

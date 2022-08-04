@@ -5,7 +5,7 @@ const ItemTarea = (props) => {
        
              <ListGroup.Item className='d-flex justify-content-between'>
                  {props.tareaCargada}
-                 <Button variant='danger'>Borrar</Button>
+                 <Button variant='danger' onClick={()=> props.borrarTarea(props.tareaCargada)}>Borrar</Button>
 
              </ListGroup.Item>
        
