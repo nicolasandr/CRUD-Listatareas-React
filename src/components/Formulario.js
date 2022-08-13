@@ -2,15 +2,13 @@ import React, {useEffect, useState} from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import ListaTareas from "./ListaTareas";
-//alternativa para importar de bootstrap
-// import {Form,Button} form 'react-bootstrap';
 
 const Formulario = () => {
 
 // aqui va la logica
 let tareasLocalStorage = JSON.parse(localStorage.getItem('listaTareas')) || [];
 // crear un state
-const [arregloTareas, setArregloTareas] = useState([]);
+const [arregloTareas, setArregloTareas] = useState(tareasLocalStorage);
 const [tarea, setTarea] = useState('');
 
 //ciclo de vida del componente
@@ -19,14 +17,7 @@ useEffect(()=>{
   localStorage.setItem('listaTareas',JSON.stringify(arregloTareas))
 },[arregloTareas]);
 
-// aqui va el maquetado y un poco de logica
 
-// const actualizarTarea = (e) => {
-//   //obtener el value de mi input
-//  console.log(e.target.value)
-//  // actualizar el state
-//  setTarea(e.target.value.trim());
-// }
 
 const handleSubmit  = (e) => {
  e.preventDefault();
@@ -37,7 +28,7 @@ const handleSubmit  = (e) => {
 }
 //funcion para borrar tarea
 const borrarTarea = (nombre) =>{
- let arregloModificado = arregloTareas.filter((valor)=>{return valor != nombre})
+ let arregloModificado = arregloTareas.filter((valor)=>{return valor !== nombre})
  // actualizar el state
  setArregloTareas(arregloModificado);
 }
