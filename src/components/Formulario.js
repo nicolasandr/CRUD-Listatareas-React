@@ -17,8 +17,6 @@ useEffect(()=>{
   localStorage.setItem('listaTareas',JSON.stringify(arregloTareas))
 },[arregloTareas]);
 
-
-
 const handleSubmit  = (e) => {
  e.preventDefault();
  console.log('prueba de submit');
