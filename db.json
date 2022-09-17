@@ -5,20 +5,16 @@
       "id": 1
     },
     {
-      "nombreTarea": "analisis 3",
-      "id": 2
-    },
-    {
-      "nombreTarea": "fisica electronica",
-      "id": 3
-    },
-    {
-      "nombreTarea": "fisica electronica 2",
+      "nombreTarea": "nicolas",
       "id": 4
     },
     {
-      "nombreTarea": "limpiar mi casa",
+      "nombreTarea": "analisis de señales",
       "id": 5
+    },
+    {
+      "nombreTarea": "fisica electronica 2",
+      "id": 6
     }
   ]
 }
