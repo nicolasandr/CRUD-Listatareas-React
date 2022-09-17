@@ -1,13 +1,24 @@
 {
-    "tareas": [
-        {
-            "nombreTarea": "analisis 2",
-            "id":1
-        },
-         {
-             "nombreTarea": "analisis 3",
-             "id": 2
-         }
-
-    ]
+  "tareas": [
+    {
+      "nombreTarea": "analisis 2",
+      "id": 1
+    },
+    {
+      "nombreTarea": "analisis 3",
+      "id": 2
+    },
+    {
+      "nombreTarea": "fisica electronica",
+      "id": 3
+    },
+    {
+      "nombreTarea": "fisica electronica 2",
+      "id": 4
+    },
+    {
+      "nombreTarea": "limpiar mi casa",
+      "id": 5
+    }
+  ]
 }
