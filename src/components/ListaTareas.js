@@ -7,7 +7,7 @@ const ListaTareas = (props) => {
     <div>
       <ListGroup>
         {
-          props.arregloTareas.map((item,posicion)=> <ItemTarea key={posicion} tareaCargada={item} borrarTarea={props.borrarTarea}></ItemTarea>)
+          props.arregloTareas.map((tarea)=> <ItemTarea key={tarea.id} tarea={tarea} borrarTarea={props.borrarTarea}></ItemTarea>)
         }
       </ListGroup>
     </div>
