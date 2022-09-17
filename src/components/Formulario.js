@@ -7,8 +7,7 @@ import Alert from 'react-bootstrap/Alert';
 
 const Formulario = () => {
     const URL = process.env.REACT_APP_API_LISTATAREAS;
-    // aqui va la logica
-    // crear un state
+
     const [arregloTareas, setArregloTareas] = useState([]); //useState(tareasLocalStorage)
     const [nombreTarea, setnombreTarea] = useState('');
     const [msjError, setMsjError] = useState(false);
@@ -19,7 +18,7 @@ const Formulario = () => {
 
     const consultarAPI = async () => {
         try {
-            //peticion get
+            //peticion GET
             const respuesta = await fetch(URL);
             const listaTareas = await respuesta.json();
             setArregloTareas(listaTareas);
@@ -49,13 +48,7 @@ const Formulario = () => {
                     body: JSON.stringify(nuevaTarea),
                 });
                 if (respuesta.status === 201) {
-                    //mostrar mensaje que todo salio bien
-                    // Swal.fire(
-                    //     'Tarea creada!',
-                    //     'La tarea se creó correctamente!',
-                    //     'success'
-                    // );
-                     refescarPagina();
+                    refescarPagina();
                 }
                 console.log(respuesta);
             } catch (error) {
@@ -66,9 +59,9 @@ const Formulario = () => {
             setMsjError(true);
         }
     };
-  const refescarPagina = () => {
-      window.location.reload(true);
-  };
+    const refescarPagina = () => {
+        window.location.reload(true);
+    };
     return (
         <div>
             <Form onSubmit={handleSubmit}>
@@ -79,7 +72,6 @@ const Formulario = () => {
                         onChange={(e) =>
                             setnombreTarea(e.target.value.trimStart())
                         }
-                        // value={tarea}
                     />
 
                     <Button variant="primary" type="submit">
@@ -92,7 +84,7 @@ const Formulario = () => {
                     Debe corregir los datos
                 </Alert>
             ) : null}
-            
+
             <ListaTareas
                 arregloTareas={arregloTareas}
                 consultarAPI={consultarAPI}

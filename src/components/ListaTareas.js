@@ -1,4 +1,3 @@
-import React,{Alert} from 'react';
 import ListGroup from 'react-bootstrap/ListGroup';
 import ItemTarea from './ItemTarea';
 
@@ -8,16 +7,12 @@ const ListaTareas = (props) => {
             <ListGroup>
                 {props.arregloTareas.map((tarea) => (
                     <ItemTarea
-                        key={tarea.id}
+                        key={tarea._id}
                         tarea={tarea}
                         consultarAPI={props.consultarAPI}
                     ></ItemTarea>
                 ))}
             </ListGroup>
-            {/* <Alert variant="danger">
-                debe agregar correctamente los datos
-            </Alert> */}
-  
         </div>
     );
 };

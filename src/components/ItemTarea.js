@@ -18,10 +18,9 @@ const ItemTarea = (props) => {
             if (result.isConfirmed) {
                 //realizamos la peticion DELETE
                 try {
-                    const respuesta = await fetch(URL + '/' + props.tarea.id, {
+                    const respuesta = await fetch(URL + '/' + props.tarea._id, {
                         method: 'DELETE',
                     });
-                    console.log(respuesta);
                     if (respuesta.status === 200) {
                         Swal.fire(
                             'Tarea borrada!',
