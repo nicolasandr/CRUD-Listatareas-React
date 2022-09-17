@@ -4,7 +4,7 @@ class Subtitulo extends Component {
     render() {
         return (
             <div>
-                <p className='text-center'>Lista de tareas usando react y localstorage</p>
+                <p className='text-center'>Mi lista de tareas personal</p>
             </div>
         );
     }

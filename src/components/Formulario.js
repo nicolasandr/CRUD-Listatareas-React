@@ -3,7 +3,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import ListaTareas from './ListaTareas';
 import { cantidadCaracteres } from './helpers';
-import Swal from 'sweetalert2';
+import Alert from 'react-bootstrap/Alert';
 
 const Formulario = () => {
     const URL = process.env.REACT_APP_API_LISTATAREAS;
@@ -50,12 +50,12 @@ const Formulario = () => {
                 });
                 if (respuesta.status === 201) {
                     //mostrar mensaje que todo salio bien
-                    Swal.fire(
-                        'Tarea creada!',
-                        'La tarea se creó correctamente!',
-                        'success'
-                    );
-                    consultarAPI();
+                    // Swal.fire(
+                    //     'Tarea creada!',
+                    //     'La tarea se creó correctamente!',
+                    //     'success'
+                    // );
+                     refescarPagina();
                 }
                 console.log(respuesta);
             } catch (error) {
@@ -66,7 +66,9 @@ const Formulario = () => {
             setMsjError(true);
         }
     };
-  
+  const refescarPagina = () => {
+      window.location.reload(true);
+  };
     return (
         <div>
             <Form onSubmit={handleSubmit}>
@@ -85,7 +87,12 @@ const Formulario = () => {
                     </Button>
                 </Form.Group>
             </Form>
-            {/* aqui invoco al componente ListaTareas */}
+            {msjError ? (
+                <Alert variant="danger" className="mt-4">
+                    Debe corregir los datos
+                </Alert>
+            ) : null}
+            
             <ListaTareas
                 arregloTareas={arregloTareas}
                 consultarAPI={consultarAPI}

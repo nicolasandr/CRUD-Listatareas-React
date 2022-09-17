@@ -10,7 +10,7 @@ const App = () => {
     return (
       <section className='container my-5'>
         <div>
-          <Titulo comision='c2i'></Titulo>
+          <Titulo></Titulo>
           <Subtitulo></Subtitulo>
           <Formulario></Formulario>
          

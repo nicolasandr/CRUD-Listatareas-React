@@ -17,6 +17,7 @@ const ListaTareas = (props) => {
             {/* <Alert variant="danger">
                 debe agregar correctamente los datos
             </Alert> */}
+  
         </div>
     );
 };
