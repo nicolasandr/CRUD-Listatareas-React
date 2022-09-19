@@ -1,10 +1,11 @@
-# Getting Started with Create React App
+# Lista de Tareas
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Crear una aplicación web que muestre una lista de tareas, al ingresar una tarea
+en el input y presionar enter, esta tarea se debe mostrar en una lista
 
-## Ejecutamos json-server
+## instalacion `npm install`
 
-json-server --watch db.json --port 3002
+## Ejecutamos json-server`json-server --watch db.json --port 3002`
 
-### `npm start`
+### ejecutamos Node.js `npm start`
 
